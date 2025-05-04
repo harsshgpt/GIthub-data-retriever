@@ -1,6 +1,7 @@
 let btn = document.getElementById("submitBtn")
 let input = document.getElementById("usernameInput")
 let img = document.getElementById("avatar")
+let src = img.getAttribute("src")
 let name = document.getElementById("name");
 let username = document.getElementById("username")
 const bio = document.getElementById("bio")
@@ -17,15 +18,8 @@ function getprofiledata (username){
 }
 
 btn.addEventListener("click",function(){
-    const user = input.value.trim();
-    let details  = 0
-    getprofiledata(user).then(function(data){
-       img.src =  data.avatar_url;
+    input1 = input.value.trim();
+    getprofiledata(input1).then(function(data){
+      src = data.
     })
-    
-    
-})
-
-
-
-
+    })
